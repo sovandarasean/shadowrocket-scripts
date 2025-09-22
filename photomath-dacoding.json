@@ -1,0 +1,56 @@
+var obj = JSON.parse($response.body);
+
+obj={
+  "status": "ok",
+  "content": {
+    "userId": "ec4f535a-937d-4202-8c91-325779d8a489",
+    "pushConsent": false,
+    "pushToken": "dmvsqPGBKkkQvlZjMifL-j:APA91bHwSYUiFwunobnQBV2UH3Zf-aPwu6lYpoOhHPEKFpuXqHcGsRMSRQfdu_gdYmHayjvkdsfllC84ZDUDczgytzTFki2tPlxT0ZZCq1ESPfNZP4jPdFw",
+    "country": "KH",
+    "timeZoneId": "Asia/Phnom_Penh",
+    "problemDbEnabled": true,
+    "type": "anonymous",
+    "provider": "photomath",
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlYzRmNTM1YS05MzdkLTQyMDItOGM5MS0zMjU3NzlkOGE0ODkiLCJhdWQiOiJwaG90b21hdGgiLCJuYmYiOjE3NTg1MzE5MDgsInNjb3BlIjpbImZyZWU6c29sdXRpb24iLCJwYWlkOnNvbHV0aW9uIiwidHJpYWw6c29sdXRpb24iLCJ3aXA6YmFzaWMiXSwiaXNzIjoiaHR0cHM6Ly9sYXBpLnBob3RvbWF0aC5uZXQvdjUiLCJyb2xlc0tleSI6InNjb3BlIiwiZXhwIjoxNzU5MTM2NzA4LCJpYXQiOjE3NTg1MzE5MDh9.5Dz0_O1SI_TDuHRgPQQkShpjCOewhkPgoyHuyeK53AY",
+    "refreshToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlYzRmNTM1YS05MzdkLTQyMDItOGM5MS0zMjU3NzlkOGE0ODkiLCJhdWQiOiJwaG90b21hdGgiLCJuYmYiOjE3NTg1MzE5MDgsInNjb3BlIjpbInJlZnJlc2giXSwiaXNzIjoiaHR0cHM6Ly9sYXBpLnBob3RvbWF0aC5uZXQvdjUiLCJyb2xlc0tleSI6InNjb3BlIiwiZXhwIjoxNzc0MDgzOTA4LCJpYXQiOjE3NTg1MzE5MDh9.rT-Xhz9ID8hEpXQOaPsPzdTeAAEKOVRY_vlYWh1P2t4",
+    "scope": [
+      "free:solution",
+      "paid:solution",
+      "trial:solution",
+      "wip:basic"
+    ],
+    "created": "2025-09-22T08:24:45.497Z",
+    "updated": "2025-09-22T09:03:08.035Z",
+    "providerIds": [
+      "214E59FB-1223-4A19-82D5-FBB406466C8F"
+    ],
+    "status": "pending",
+    "tier": {
+      "level": "genius"
+    },
+    "region": "12",
+    "subscription": {
+      "packageName": "com.microblink.PhotoMath",
+      "productId": "com.microblink.PhotoMath.purchase.genius.one_year",
+      "orderId": "470002686238523",
+      "expiry": "2050-09-29T09:03:02.000Z",
+      "started": "2025-09-22T09:03:02.000Z",
+      "autoRenewing": true,
+      "status": "active",
+      "inGracePeriod": false,
+      "isTrial": false
+    },
+    "binomialType": "NotationOne",
+    "freeSundayVariant": "Disabled",
+    "freeSunday": false,
+    "freePlusVariant": "Unset"
+  },
+  "geo": {
+    "age": 13,
+    "eu": false,
+    "americas": false,
+    "region": "12",
+    "country": "KH"
+  }
+};
+$done({body: JSON.stringify(obj)});
