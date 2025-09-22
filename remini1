@@ -1,0 +1,2299 @@
+var obj = JSON.parse($response.body);
+
+obj={
+  "me": {
+    "unique_id": "F9B61D5C-28A2-4041-9865-020F85A168FF",
+    "is_spooner": false,
+    "active_bundle_subscriptions": [],
+    "active_subscriptions_ids": [
+      "com.bigwinepot.nwdn.international.1y_p44_99_ft_pro"
+    ],
+    "non_consumables_ids": [],
+    "available_consumable_credits": {},
+    "active_subscriptions": [
+      {
+        "id": "com.bigwinepot.nwdn.international.1y_p44_99_ft_pro",
+        "is_cancelled": false,
+        "vendor": "apple",
+        "timestamp": 1758535948
+      }
+    ],
+    "privacy_notice": {
+      "last_acknowledged_version": "3.17.0"
+    },
+    "terms_of_service": {
+      "last_accepted_version": "3.2.0"
+    }
+  },
+  "settings": {
+    "__identity__": {
+      "token": "eyJhbGciOiJIUzI1NiIsImtpZCI6ImEwMWFkNDRkNjAyOTgzYTQxOTE5MzUwZTRmMGMxZWVhIiwidHlwIjoiSldUIn0.eyJwYXlsb2FkIjp7ImJhY2tlbmRfaWQiOiJGOUI2MUQ1Qy0yOEEyLTQwNDEtOTg2NS0wMjBGODVBMTY4RkYiLCJ1c2VyX2lkIjoiQzZBRDE5OTYtNEE5MS00MUI4LUJFQUUtNDgzNzVCMEI2NDQ3IiwiaXNfZnJlZSI6ZmFsc2UsImlzX3Nwb29uZXIiOmZhbHNlLCJpc19zdWJzY3JpYmVkIjp0cnVlLCJwcml2YWN5X3BvbGljeSI6eyJsYXN0X2Fja25vd2xlZGdlZF92ZXJzaW9uIjoiMy4xNy4wIn0sInNldHRpbmdzIjp7ImFidXNlX2RldGVjdG9yX2FwcF9jaGVjayI6eyJhdmF0YXIiOiJkaXNhYmxlZCIsImVuaGFuY2UiOiJkaXNhYmxlZCIsImFpX3Bob3RvIjoiZGlzYWJsZWQiLCJhaV9zdHlsZXMiOiJkaXNhYmxlZCIsImZhY2VfcmVjb2duaXRpb24iOiJkaXNhYmxlZCJ9LCJhYnVzZV9kZXRlY3Rvcl9hcHBfY2hlY2tfZW5hYmxlZCI6bnVsbCwiYWJ1c2VfZGV0ZWN0b3JfcGxheV9pbnRlZ3JpdHkiOm51bGwsImFidXNlX2RldGVjdG9yX3BsYXlfaW50ZWdyaXR5X2VuYWJsZWQiOm51bGwsImFidXNlX2RldGVjdG9yX3JlY2VpcHQiOnsiYXZhdGFyIjoiZGlzYWJsZWQiLCJlbmhhbmNlIjoiZGlzYWJsZWQiLCJhaV9waG90byI6ImRpc2FibGVkIiwiYWlfc3R5bGVzIjoiZGlzYWJsZWQiLCJmYWNlX3JlY29nbml0aW9uIjoiZGlzYWJsZWQifSwiYWJ1c2VfZGV0ZWN0b3JfcmVjZWlwdF9lbmFibGVkIjpudWxsLCJhaV9jb25maWdfdG9vbHNfb3JkZXIiOlsic2NyZWVuc2hvdF9mcmFtaW5nIiwiYXV0b19jcm9wcGluZyIsImF1dG9fZnJhbWluZyIsInJ1bGVfY3JvcHBpbmciLCJsaWdodF9lbmhhbmNlIiwiZGVzY3JhdGNoIiwiY29sb3JpemUiLCJjb2xvcl9lbmhhbmNlIiwiZmFjZV9zcG90bGlnaHQiLCJmb3JlaWduX3NoYWRvd19yZW1vdmFsIiwiY29sb3JfZ3JhZGluZyIsImhhaXJfY29sb3JpbmciLCJoYWlyX2xpZnRpbmciLCJoYWlyX3ZvbHVtZSIsImJhY2tncm91bmRfZW5oYW5jZSIsInNraW5fc21vb3RoaW5nIiwiZXllYmFnX3JlbW92YWwiLCJzbWlsZSIsInBvcnRyYWl0X3ZvbHVtZXMiLCJmYWNlX21ha2V1cF9taXhlZCIsImZhY2VfbWFrZXVwX2FuZF9ibHVzaCIsImZhY2VfYmx1c2giLCJmYWNlX3NoYWRvd19saWZ0aW5nIiwiZmFjZV9saWZ0aW5nIiwiZmFjZV9tZXNoaW5nIiwiZmFjZV9tZXNoaW5nX2FsZ28iLCJmYWNlX2VuaGFuY2UiLCJleWVfYnJpbGxpYW5jZSIsIm1hdHRpZmllciIsInRlZXRoX3doaXRlbmluZyIsImRvZGdlX2J1cm4iLCJoZWFsIiwiZmFjZV9tYWtldXAiLCJib2tlaCIsImJhY2tncm91bmRfcmVtb3ZhbCIsInNwb3RsaWdodCIsImx1dCIsInZpZ25ldHRlIiwiZmlsbWdyYWluIiwicmVjb2xvciIsImdsb3NzIiwidm9sdW1lIiwiaGFpcnN0eWxlIl0sImFpX3N0eWxlc19wcm9jZXNzaW5nIjp7ImdwdV90eXBlIjoiYTEwMCJ9LCJjb21wdXRlX2VuaGFuY2VfbWV0YWRhdGEiOmZhbHNlLCJkYWlseV9iYWxhbmNlX3JlY2hhcmdlIjo1LCJpcmlzX2FidXNlX2RldGVjdG9yIjp7ImVuaGFuY2UiOiJibG9ja2luZyIsImFpX3Bob3RvIjoiYmxvY2tpbmciLCJhaV9zdHlsZXMiOiJibG9ja2luZyIsImZhY2VfcmVjb2duaXRpb24iOiJkaXNhYmxlZCJ9LCJpc19zcG9vbmVyX2RldmljZSI6ZmFsc2UsInJldGFrZV9haV9wcm9jZXNzaW5nX3JvdXRpbmciOiJ7fSIsInNhdmVfY2xpcF9lbWJlZGRpbmciOmZhbHNlLCJ2aWRlb19lbmhhbmNlbWVudF9mcmVlX2VuaGFuY2VtZW50X2NvdW50IjpudWxsfSwiY29uc3VtYWJsZV9jcmVkaXRzIjp7fSwiYWN0aXZlX3Byb2R1Y3RzIjp7InN1YnNjcmlwdGlvbl9pZHMiOlsiY29tLmJpZ3dpbmVwb3Qubndkbi5pbnRlcm5hdGlvbmFsLjF3X3A5Xzk5X2Z0X3BybyJdLCJub25fY29uc3VtYWJsZV9pZHMiOltdfX0sImlzcyI6InJlbWluaSIsImlhdCI6MTc1ODUzOTAyOSwibmJmIjoxNzU4NTM5MDI5LCJleHAiOjE3NTg2MjU0Mjl9.RT72E2Jesnyypklz32It2tH2AlZeXtZDCn8nbM7DW7o",
+      "expiration": "2090-09-23T11:03:49Z"
+    },
+    "__is_free__": false,
+    "__experiments__": {},
+    "__is_baseline__": false,
+    "__is_testflight__": false,
+    "__min_required_build_version__": "2.9.21",
+    "__privacy_notice_url__": "https://support.bendingspoons.com/privacy.html?app=1470373330&version=3.17.0",
+    "__privacy_notice_version__": "3.17.0",
+    "__privacy_policy_url__": "https://support.bendingspoons.com/privacy.html?app=1470373330&version=3.17.0",
+    "__privacy_policy_version__": "3.17.0",
+    "__terms_of_service_effective_date__": "2024-06-05T12:00:00+00:00",
+    "__terms_of_service_url__": "https://support.bendingspoons.com/tos.html?app=1470373330&version=3.2.0",
+    "__terms_of_service_version__": "3.2.0",
+    "__terms_of_service_update_message__": null,
+    "__active_holders_ids__": [],
+    "daily_balance_recharge": 5,
+    "abuse_detector_app_check": {
+      "avatar": "disabled",
+      "enhance": "disabled",
+      "ai_photo": "disabled",
+      "ai_styles": "disabled",
+      "face_recognition": "disabled"
+    },
+    "abuse_detector_receipt": {
+      "avatar": "disabled",
+      "enhance": "disabled",
+      "ai_photo": "disabled",
+      "ai_styles": "disabled",
+      "face_recognition": "disabled"
+    },
+    "retake_ai_processing_routing": "{}",
+    "_plan_remini_android_pro": {
+      "features": [
+        "enhance",
+        "video-enhance",
+        "customizable-tools",
+        "web",
+        "retake",
+        "ai-styles",
+        "textual-edits"
+      ],
+      "bundles": []
+    },
+    "eta_based_polling_enabled": false,
+    "ai_styles_processing": {
+      "gpu_type": "a100"
+    },
+    "iris_abuse_detector": {
+      "enhance": "blocking",
+      "ai_photo": "blocking",
+      "ai_styles": "blocking",
+      "face_recognition": "disabled"
+    },
+    "_plan_remini_pro": {
+      "features": [
+        "video",
+        "retake",
+        "web",
+        "customizable-tools",
+        "ai-styles",
+        "enhance-plus",
+        "pack-flow",
+        "ai-stickers",
+        "textual-edits"
+      ],
+      "bundles": []
+    },
+    "_plan_remini_lite": {
+      "features": [
+        "retake",
+        "ai-styles",
+        "enhance-plus",
+        "pack-flow",
+        "textual-edits"
+      ],
+      "bundles": []
+    },
+    "_plan_test_migration": {
+      "features": [
+        "video",
+        "ai-styles",
+        "retake",
+        "enhance-plus",
+        "web",
+        "customizable-tools",
+        "pack-flow",
+        "textual-edits"
+      ],
+      "bundles": []
+    },
+    "_plan_remini_service_level_four": {
+      "features": [
+        "retake",
+        "ai-styles",
+        "video",
+        "enhance-plus",
+        "pack-flow",
+        "textual-edits"
+      ],
+      "bundles": []
+    },
+    "_plan_remini_service_level_five": {
+      "features": [
+        "customizable-tools",
+        "ai-styles",
+        "retake",
+        "enhance-plus",
+        "pack-flow",
+        "textual-edits"
+      ],
+      "bundles": []
+    },
+    "_plan_remini_upgrade_video": {
+      "features": [
+        "customizable-tools",
+        "web",
+        "retake",
+        "ai-styles",
+        "video",
+        "enhance-plus",
+        "pack-flow",
+        "textual-edits"
+      ],
+      "bundles": []
+    },
+    "compute_enhance_metadata": false,
+    "_plan_remini_service_level_three": {
+      "features": [
+        "customizable-tools",
+        "web",
+        "retake",
+        "ai-styles",
+        "enhance-plus",
+        "video",
+        "pack-flow",
+        "textual-edits"
+      ],
+      "bundles": []
+    },
+    "_plan_remini_service_level_seven": {
+      "features": [
+        "retake",
+        "ai-styles",
+        "enhance-plus",
+        "pack-flow",
+        "textual-edits"
+      ],
+      "bundles": []
+    },
+    "is_using_fastly": false,
+    "enhance_on_redis": true,
+    "save_clip_embedding": false,
+    "ai_config_tools_order": [
+      "screenshot_framing",
+      "auto_cropping",
+      "auto_framing",
+      "rule_cropping",
+      "light_enhance",
+      "descratch",
+      "colorize",
+      "color_enhance",
+      "face_spotlight",
+      "foreign_shadow_removal",
+      "color_grading",
+      "hair_coloring",
+      "hair_lifting",
+      "hair_volume",
+      "background_enhance",
+      "skin_smoothing",
+      "eyebag_removal",
+      "smile",
+      "portrait_volumes",
+      "face_makeup_mixed",
+      "face_makeup_and_blush",
+      "face_blush",
+      "face_shadow_lifting",
+      "face_lifting",
+      "face_meshing",
+      "face_meshing_algo",
+      "face_enhance",
+      "eye_brilliance",
+      "mattifier",
+      "teeth_whitening",
+      "dodge_burn",
+      "heal",
+      "face_makeup",
+      "bokeh",
+      "background_removal",
+      "spotlight",
+      "lut",
+      "vignette",
+      "filmgrain",
+      "recolor",
+      "gloss",
+      "volume",
+      "hairstyle"
+    ],
+    "ai_filters_on_redis": true,
+    "_plan_cross_sell_focos": {
+      "features": [],
+      "bundles": [
+        {
+          "bsp_id": "com.focos",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.focoslive",
+          "all_features": true,
+          "plan_id": null
+        }
+      ]
+    },
+    "_plan_cross_sell_creativity": {
+      "features": [],
+      "bundles": [
+        {
+          "bsp_id": "com.focos",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.focoslive",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.cinegenix.filmic.pro",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.filmicpro.doubletake",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.filmicpro.firstlight",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.cinegenix.filmic.legacy",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.filmic.dragonfly",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.path36.SpliceFree",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.alightcreative.motion",
+          "all_features": true,
+          "plan_id": null
+        }
+      ]
+    },
+    "_plan_cross_sell_wellbeing": {
+      "features": [],
+      "bundles": [
+        {
+          "bsp_id": "com.vigorapps.30DayFitness",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.flyingnayeem.yoga",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.bendingspoonsapps.SleepHelp",
+          "all_features": true,
+          "plan_id": null
+        },
+        {
+          "bsp_id": "com.lesunga.Sleep",
+          "all_features": true,
+          "plan_id": null
+        }
+      ]
+    },
+    "_plan_test_feature": {
+      "features": [],
+      "bundles": []
+    },
+    "is_spooner_device": false,
+    "consumable_credits_overrides": {},
+    "__geo_location_country__": "kh",
+    "__encryption_algorithm__": "RSA2048PKCS1",
+    "__encryption_key_id__": "53bfd4440016c",
+    "__encryption_public_key__": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6WMNkl4avAdHhYGc20hq\n8DcVtWanEtvuzM7g80Pe8Tv+eyrGyO1+XrgOUu7FRW2TFAl1q1r+3Uls0Y4Xyevi\n1F52DlSrKUJ84fpHIlhMhG8fGKTtAEOZ/CeSj4eUIjGqZe79/BAsEs1A5TZEKdlw\n24oeuMklhCeJ09Im/cU5FQJ18f6Ew8Dqmp7lLKsXoUA8hhBAPbcN7cb4cX6pvNWC\n+alZ9yX2sm4gs3cqjHPsLIEptJkaR469ZcSxqbBNtduS+DMRyhVD+M9ekjdv6aaE\nmRuFumWRtLtGvL9QfyOvTQPsp4eI/O4iZUH7A/W9L67WiYWDPhyknGd7fjIaEedS\n5wIDAQAB\n-----END PUBLIC KEY-----"
+  },
+  "force_updater": {
+    "suggested_build_version": "0.0.0",
+    "suggested_update_frequency": 0,
+    "action": "do_nothing"
+  },
+  "legal_notifications": {
+    "to_notify_privacy_policy": false,
+    "to_notify_terms_of_service": false
+  },
+  "products": {
+    "consumables": [
+      {
+        "product_id": "n0001",
+        "status": "APPROVED",
+        "consumable_credits": {
+          "avatar_generations": 1
+        }
+      },
+      {
+        "product_id": "n0002",
+        "status": "APPROVED",
+        "consumable_credits": {
+          "avatar_generations": 1
+        }
+      },
+      {
+        "product_id": "n0003",
+        "status": "APPROVED",
+        "consumable_credits": {
+          "avatar_generations": 1
+        }
+      },
+      {
+        "product_id": "n0005",
+        "status": "APPROVED",
+        "consumable_credits": {
+          "avatar_generations": 1
+        }
+      },
+      {
+        "product_id": "n0006",
+        "status": "APPROVED",
+        "consumable_credits": {
+          "avatar_generations": 1
+        }
+      },
+      {
+        "product_id": "n0007",
+        "status": "APPROVED",
+        "consumable_credits": {
+          "avatar_generations": 1
+        }
+      },
+      {
+        "product_id": "ai_photo_training_p4_99",
+        "status": "APPROVED",
+        "consumable_credits": {
+          "ai_photo_training": 1,
+          "ai_photo_generation": 5
+        }
+      },
+      {
+        "product_id": "ai_photo_generation_p1_99",
+        "status": "APPROVED",
+        "consumable_credits": {
+          "ai_photo_generation": 5
+        }
+      },
+      {
+        "product_id": "ai_photo_generation_p2_99",
+        "status": "APPROVED",
+        "consumable_credits": {
+          "ai_photo_generation": 5
+        }
+      },
+      {
+        "product_id": "ai_photo_generation_p0_99",
+        "status": "APPROVED",
+        "consumable_credits": {
+          "ai_photo_generation": 5
+        }
+      },
+      {
+        "product_id": "1_credit_0001",
+        "status": "APPROVED",
+        "consumable_credits": {}
+      }
+    ],
+    "non_consumables": [
+      {
+        "product_id": "ad_free_lifetime_test",
+        "status": "APPROVED",
+        "features": [],
+        "plan_id": null,
+        "secondary_apps": []
+      }
+    ],
+    "subscriptions": [
+      {
+        "product_id": "subs0002",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "video"
+        ],
+        "plan_id": null,
+        "secondary_apps": []
+      },
+      {
+        "product_id": "subs0003",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "video"
+        ],
+        "plan_id": null,
+        "secondary_apps": []
+      },
+      {
+        "product_id": "subs0004",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "video"
+        ],
+        "plan_id": null,
+        "secondary_apps": []
+      },
+      {
+        "product_id": "subs0005",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "video"
+        ],
+        "plan_id": null,
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t2",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t2_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t4",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t4_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t6",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t6_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1m_t10",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1m_t10_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1m_t20",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t60",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t60_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t80",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t80_1w_bis",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t100",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t100_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t8",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t8_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t10",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t10_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1m_t24",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1m_t24_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1m_t26",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1m_t26_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t110",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t110_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t120",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t120_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t14",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t14_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t18",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t18_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t20",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t20_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_service_level_three",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t24",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_upgrade_video",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t24_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_upgrade_video",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t26_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t28_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t30",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_upgrade_video",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t30_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_upgrade_video",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t1",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t1_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t86",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t86_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video"
+        ],
+        "plan_id": "remini_service_level_four",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t20_1w_bis",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_service_level_three",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t10_bis",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t10_1w_bis",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t10_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t10_1w_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_service_level_seven",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t2_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t2_1w_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t4_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t4_1w_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t6_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t6_1w_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t8_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t8_1w_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t10_1w_sp",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t10_sp",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t168_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_upgrade_video",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t168",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_upgrade_video",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t10_ct",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_service_level_seven",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t10_1w_ct",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_service_level_seven",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t120_1w_ct",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_t120_ct",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t2_1w_ct",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_service_level_five",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t4_1w_ct",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_service_level_three",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t4_ct",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_service_level_three",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t2_ct",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_service_level_five",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t10_3d",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p34_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p34_99_1w",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p9_99_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p9_99_ft_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p4_99_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p4_99_ft_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p64_99_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p64_99_ft_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p44_99_ft_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p44_99_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p5_99_ft_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p5_99_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p99_99_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_upgrade_video",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p99_99_ft_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_upgrade_video",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p9_99_paygo_1w_0_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p4_99_paygo_1w_0_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p9_99_paygo_2w_0_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p9_99_paygo_4w_0_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p9_99_paygo_6w_0_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p5_99_ft_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p5_99_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p44_99_ft_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p44_99_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p34_99_ft_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p34_99_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p2_99_ft_bundle_focos",
+        "status": "APPROVED",
+        "features": [],
+        "plan_id": "cross_sell_focos",
+        "secondary_apps": [
+          {
+            "bsp_id": "com.focos",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.focoslive",
+            "plan_id": null
+          }
+        ]
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p2_99_ft_bundle_creativity",
+        "status": "APPROVED",
+        "features": [],
+        "plan_id": "cross_sell_creativity",
+        "secondary_apps": [
+          {
+            "bsp_id": "com.focos",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.focoslive",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.cinegenix.filmic.pro",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmicpro.doubletake",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmicpro.firstlight",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.cinegenix.filmic.legacy",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmic.dragonfly",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.path36.SpliceFree",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.alightcreative.motion",
+            "plan_id": null
+          }
+        ]
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p2_99_ft_bundle_wellbeing",
+        "status": "APPROVED",
+        "features": [],
+        "plan_id": "cross_sell_wellbeing",
+        "secondary_apps": [
+          {
+            "bsp_id": "com.vigorapps.30DayFitness",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.flyingnayeem.yoga",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.bendingspoonsapps.SleepHelp",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.lesunga.Sleep",
+            "plan_id": null
+          }
+        ]
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_t20_2w",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p29_99_ft_bundle_all",
+        "status": "APPROVED",
+        "features": [],
+        "plan_id": null,
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p9_99_ft_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p39_99_pro",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p17_99_lite",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p4_99_ft_bundle_focos",
+        "status": "APPROVED",
+        "features": [],
+        "plan_id": "cross_sell_focos",
+        "secondary_apps": [
+          {
+            "bsp_id": "com.focos",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.focoslive",
+            "plan_id": null
+          }
+        ]
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p7_99_ft_bundle_focos",
+        "status": "APPROVED",
+        "features": [],
+        "plan_id": "cross_sell_focos",
+        "secondary_apps": [
+          {
+            "bsp_id": "com.focos",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.focoslive",
+            "plan_id": null
+          }
+        ]
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p9_99_ft_bundle_focos",
+        "status": "APPROVED",
+        "features": [],
+        "plan_id": "cross_sell_focos",
+        "secondary_apps": [
+          {
+            "bsp_id": "com.focos",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.focoslive",
+            "plan_id": null
+          }
+        ]
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p4_99_pro_paygo_0_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p34_99_pro_paygo_0_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p34_99_lite_paygo_0_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1y_p79_99_pro_paygo_0_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-stickers",
+          "ai-styles",
+          "customizable-tools",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits",
+          "video",
+          "web"
+        ],
+        "plan_id": "remini_pro",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p3_99_lite_paygo_0_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p5_99_lite_paygo_0_99",
+        "status": "APPROVED",
+        "features": [
+          "ai-styles",
+          "enhance-plus",
+          "pack-flow",
+          "retake",
+          "textual-edits"
+        ],
+        "plan_id": "remini_lite",
+        "secondary_apps": []
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p4_99_ft_bundle_creativity",
+        "status": "APPROVED",
+        "features": [],
+        "plan_id": "cross_sell_creativity",
+        "secondary_apps": [
+          {
+            "bsp_id": "com.focos",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.focoslive",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.cinegenix.filmic.pro",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmicpro.doubletake",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmicpro.firstlight",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.cinegenix.filmic.legacy",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmic.dragonfly",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.path36.SpliceFree",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.alightcreative.motion",
+            "plan_id": null
+          }
+        ]
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p9_99_ft_bundle_creativity",
+        "status": "APPROVED",
+        "features": [],
+        "plan_id": "cross_sell_creativity",
+        "secondary_apps": [
+          {
+            "bsp_id": "com.focos",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.focoslive",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.cinegenix.filmic.pro",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmicpro.doubletake",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmicpro.firstlight",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.cinegenix.filmic.legacy",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmic.dragonfly",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.path36.SpliceFree",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.alightcreative.motion",
+            "plan_id": null
+          }
+        ]
+      },
+      {
+        "product_id": "com.bigwinepot.nwdn.international.1w_p8_99_ft_bundle_creativity",
+        "status": "APPROVED",
+        "features": [],
+        "plan_id": "cross_sell_creativity",
+        "secondary_apps": [
+          {
+            "bsp_id": "com.focos",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.focoslive",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.cinegenix.filmic.pro",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmicpro.doubletake",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmicpro.firstlight",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.cinegenix.filmic.legacy",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.filmic.dragonfly",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.path36.SpliceFree",
+            "plan_id": null
+          },
+          {
+            "bsp_id": "com.alightcreative.motion",
+            "plan_id": null
+          }
+        ]
+      }
+    ]
+  },
+  "settings_hash": "ca47897364fc3f19c04a1071243ec403",
+  "default_settings_url": null,
+  "overrides_url": null
+};
+$done({body: JSON.stringify(obj)});
