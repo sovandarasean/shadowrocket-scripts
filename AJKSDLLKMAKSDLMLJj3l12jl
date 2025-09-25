@@ -1,0 +1,20 @@
+var obj = JSON.parse($response.body);
+
+obj = {
+  "result": {
+    "activated": true,
+    "vipType": "GUEST_SUBSCRIBER",
+    "products": [
+      {
+        "storeType": "APPLE",
+        "productId": "com.campmobile.snow.subscribe.oneyear",
+        "originalTransactionId": "470002690395692",
+        "startDate": 1758801125000,
+        "expireDate": 3809998656000,
+        "managed": false,
+        "status": "ACTIVE"
+      }
+    ]
+  }
+};
+$done({body: JSON.stringify(obj)});
