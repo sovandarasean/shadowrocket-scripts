@@ -1,0 +1,450 @@
+var obj = JSON.parse($response.body);
+
+obj={
+  "isPremium": true,
+  "nextPayDate": "Oct 1, 2090, 03:19:47 AM",
+  "isCancelled": false,
+  "isDunning": false,
+  "isPaymentMethodFailed": false,
+  "isFree": false,
+  "canCancelPlanSwitch": false,
+  "isFreebie": false,
+  "isPremiumConversion": false,
+  "isLegacyPayPal": false,
+  "isOnTrial": false,
+  "currentPlan": {
+    "id": 10205802,
+    "regularPlanId": 10200492,
+    "title": "Annual",
+    "description": "Apple Annual with Trial",
+    "regularPrice": 0,
+    "regularPriceMoney": {
+      "currency": "USD",
+      "value": 0
+    },
+    "price": 139.99,
+    "priceMoney": {
+      "currency": "USD",
+      "value": 139.99
+    },
+    "periodMonths": 12,
+    "hasTrial": true,
+    "trialDays": 7,
+    "baseInstitutionCampaign": false
+  },
+  "countryCode": "KH",
+  "plans": [
+    {
+      "id": 10205040,
+      "regularPlanId": 10205040,
+      "title": "Monthly",
+      "description": "Apple Monthly Trial",
+      "regularPrice": 0,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 0
+      },
+      "price": 0,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 0
+      },
+      "periodMonths": 1,
+      "hasTrial": true,
+      "trialDays": 7,
+      "baseInstitutionCampaign": false
+    },
+    {
+      "id": 10205804,
+      "regularPlanId": 10205040,
+      "title": "Monthly",
+      "description": "Apple Monthly with Trial",
+      "regularPrice": 0,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 0
+      },
+      "price": 29.99,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 29.99
+      },
+      "periodMonths": 1,
+      "hasTrial": true,
+      "trialDays": 7,
+      "baseInstitutionCampaign": false
+    },
+    {
+      "id": 10205039,
+      "regularPlanId": 10205039,
+      "title": "Quarterly",
+      "description": "Apple Quarterly Trial",
+      "regularPrice": 0,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 0
+      },
+      "price": 0,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 0
+      },
+      "periodMonths": 3,
+      "hasTrial": true,
+      "trialDays": 7,
+      "baseInstitutionCampaign": false
+    },
+    {
+      "id": 10205803,
+      "regularPlanId": 10205039,
+      "title": "Quarterly",
+      "description": "Apple Quarterly with Trial",
+      "regularPrice": 0,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 0
+      },
+      "price": 59.99,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 59.99
+      },
+      "periodMonths": 3,
+      "hasTrial": true,
+      "trialDays": 7,
+      "baseInstitutionCampaign": false
+    },
+    {
+      "id": 10200492,
+      "regularPlanId": 10200492,
+      "title": "Annual",
+      "description": "Apple Annual Trial",
+      "regularPrice": 0,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 0
+      },
+      "price": 0,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 0
+      },
+      "periodMonths": 12,
+      "hasTrial": true,
+      "trialDays": 7,
+      "baseInstitutionCampaign": false
+    },
+    {
+      "id": 10205802,
+      "regularPlanId": 10200492,
+      "title": "Annual",
+      "description": "Apple Annual with Trial",
+      "regularPrice": 0,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 0
+      },
+      "price": 139.99,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 139.99
+      },
+      "periodMonths": 12,
+      "hasTrial": true,
+      "trialDays": 7,
+      "baseInstitutionCampaign": false
+    }
+  ],
+  "institutionPlans": [
+    {
+      "id": 10200462,
+      "regularPlanId": 10200462,
+      "title": "Monthly",
+      "description": "1-month Grammarly Subscription",
+      "regularPrice": 25,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 25
+      },
+      "price": 25,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 25
+      },
+      "periodMonths": 1,
+      "hasTrial": false,
+      "trialDays": 0,
+      "baseInstitutionCampaign": true
+    },
+    {
+      "id": 10200487,
+      "regularPlanId": 10200487,
+      "title": "Monthly",
+      "description": "1-month Grammarly Subscription",
+      "regularPrice": 25,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 25
+      },
+      "price": 25,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 25
+      },
+      "periodMonths": 1,
+      "hasTrial": true,
+      "trialDays": 7,
+      "baseInstitutionCampaign": true
+    }
+  ],
+  "institutionEduPlans": [
+    {
+      "id": 10201059,
+      "regularPlanId": 10201059,
+      "title": "flat_edu_plan",
+      "description": "A plan for EDU with flat pricing per seat.",
+      "regularPrice": 50,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 50
+      },
+      "price": 50,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 50
+      },
+      "periodMonths": 12,
+      "hasTrial": false,
+      "trialDays": 0,
+      "baseInstitutionCampaign": false
+    }
+  ],
+  "institutionDynamicPlans": [
+    {
+      "id": 10201490,
+      "regularPlanId": 10201490,
+      "title": "Annual",
+      "description": "Annual tiered plan",
+      "regularPrice": 180,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 180
+      },
+      "price": 180,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 180
+      },
+      "periodMonths": 12,
+      "hasTrial": false,
+      "trialDays": 0,
+      "baseInstitutionCampaign": true,
+      "priceTiers": [
+        {
+          "price": 180,
+          "priceMoney": {
+            "currency": "USD",
+            "value": 180
+          },
+          "fromSeats": 0,
+          "toSeats": 9
+        },
+        {
+          "price": 174,
+          "priceMoney": {
+            "currency": "USD",
+            "value": 174
+          },
+          "fromSeats": 10,
+          "toSeats": 49
+        },
+        {
+          "price": 150,
+          "priceMoney": {
+            "currency": "USD",
+            "value": 150
+          },
+          "fromSeats": 50,
+          "toSeats": 149
+        }
+      ]
+    },
+    {
+      "id": 10201491,
+      "regularPlanId": 10201491,
+      "title": "Annual",
+      "description": "Annual tiered plan",
+      "regularPrice": 180,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 180
+      },
+      "price": 180,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 180
+      },
+      "periodMonths": 12,
+      "hasTrial": true,
+      "trialDays": 7,
+      "baseInstitutionCampaign": true,
+      "priceTiers": [
+        {
+          "price": 180,
+          "priceMoney": {
+            "currency": "USD",
+            "value": 180
+          },
+          "fromSeats": 0,
+          "toSeats": 9
+        },
+        {
+          "price": 174,
+          "priceMoney": {
+            "currency": "USD",
+            "value": 174
+          },
+          "fromSeats": 10,
+          "toSeats": 49
+        },
+        {
+          "price": 150,
+          "priceMoney": {
+            "currency": "USD",
+            "value": 150
+          },
+          "fromSeats": 50,
+          "toSeats": 149
+        }
+      ]
+    }
+  ],
+  "proPlans": [
+    {
+      "id": 10203085,
+      "renewalPlanId": 10203085,
+      "regularPlanId": 10203085,
+      "title": "Monthly",
+      "description": "Monthly Grammarly Pro plan",
+      "regularPrice": 30,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 30
+      },
+      "price": 30,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 30
+      },
+      "renewalPrice": 30,
+      "renewalPriceMoney": {
+        "currency": "USD",
+        "value": 30
+      },
+      "periodMonths": 1,
+      "hasTrial": false,
+      "trialDays": 0,
+      "baseInstitutionCampaign": false
+    },
+    {
+      "id": 10203908,
+      "renewalPlanId": 10203908,
+      "regularPlanId": 10203908,
+      "title": "Quarterly",
+      "description": "Quarterly Grammarly Pro plan",
+      "regularPrice": 60,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 60
+      },
+      "price": 60,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 60
+      },
+      "renewalPrice": 60,
+      "renewalPriceMoney": {
+        "currency": "USD",
+        "value": 60
+      },
+      "periodMonths": 3,
+      "hasTrial": false,
+      "trialDays": 0,
+      "baseInstitutionCampaign": false,
+      "priceTiers": [
+        {
+          "price": 60,
+          "priceMoney": {
+            "currency": "USD",
+            "value": 60
+          },
+          "fromSeats": 0,
+          "toSeats": 149
+        }
+      ]
+    },
+    {
+      "id": 10203084,
+      "renewalPlanId": 10203084,
+      "regularPlanId": 10203084,
+      "title": "Annual",
+      "description": "Annual Grammarly Pro plan",
+      "regularPrice": 144,
+      "regularPriceMoney": {
+        "currency": "USD",
+        "value": 144
+      },
+      "price": 144,
+      "priceMoney": {
+        "currency": "USD",
+        "value": 144
+      },
+      "renewalPrice": 144,
+      "renewalPriceMoney": {
+        "currency": "USD",
+        "value": 144
+      },
+      "periodMonths": 12,
+      "hasTrial": false,
+      "trialDays": 0,
+      "baseInstitutionCampaign": false,
+      "priceTiers": [
+        {
+          "price": 144,
+          "priceMoney": {
+            "currency": "USD",
+            "value": 144
+          },
+          "fromSeats": 0,
+          "toSeats": 149
+        }
+      ]
+    }
+  ],
+  "pricingOptions": {
+    "discountSuppressed": false,
+    "renewalPriceType": "INCLUSIVE"
+  },
+  "proPricingOptions": {
+    "discountSuppressed": false
+  },
+  "paymentMethodOptions": {
+    "payPalDisabled": false,
+    "americanExpressDisabled": false,
+    "disabledCardTypes": []
+  },
+  "subscriptionPaymentMethods": [
+    "appStore"
+  ],
+  "isAppleSubscription": true,
+  "isGooglePlaySubscription": false,
+  "isSamsungPlan": false,
+  "customerSince": "Sep 24, 2025, 03:19:51 AM",
+  "lastSubscribedDate": "Sep 24, 2025, 03:19:51 AM",
+  "state": "DEFAULT",
+  "usePaymentsApi": false,
+  "isUngatedTrialDisabled": false,
+  "isEligibleForGr4vyMigration": false
+};
+
+$done({body: JSON.stringify(obj)});
