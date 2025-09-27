@@ -1,0 +1,33 @@
+var key = obj.data.authkey; 
+obj.response = "{\"flag\":true,\"start_time\":1758956184,\"end_time\":3810151422,\"is_first_subscribe\":false,\"is_cancel_subscribe\":false,\"uid\":\"0\",\"subscribe_uid\":\"7230995567673378305\",\"subscribe_type\":\"auto\",\"authkey\":\"" + key + "\",\"product_id\":\"beauty_subscription_year\",\"subscribe_cycle\":12,\"cycle_unit\":\"MONTH\",\"space_cap\":0,\"renewal_time\":0,\"is_free_trial\":false,\"is_pippit_free_trial\":null,\"can_free_trial\":false,\"can_free_trial_days\":0,\"is_iap_uncancelled_expired_subscribe\":false,\"workspace_subscribe_info\":{\"flag\":false,\"vip_real_end\":0},\"aggressive_sensitive_user\":false,\"old_benefit\":false,\"hit_tpl_pkg_standard_experiment\":false}";
+
+obj.data = {
+  "flag": true,
+  "start_time": 1758956184,
+  "end_time": 3810151422,
+  "is_first_subscribe": false,
+  "is_cancel_subscribe": false,
+  "uid": "0",
+  "subscribe_uid": "7230995567673378305",
+  "subscribe_type": "auto",
+  "authkey": key,
+  "product_id": "beauty_subscription_year",
+  "subscribe_cycle": 12,
+  "cycle_unit": "MONTH",
+  "space_cap": 0,
+  "renewal_time": 0,
+  "is_free_trial": false,
+  "is_pippit_free_trial": null,
+  "can_free_trial": false,
+  "can_free_trial_days": 0,
+  "is_iap_uncancelled_expired_subscribe": false,
+  "workspace_subscribe_info": {
+    "flag": false,
+    "vip_real_end": 0
+  },
+  "aggressive_sensitive_user": false,
+  "old_benefit": false,
+  "hit_tpl_pkg_standard_experiment": false
+};
+
+$done({body: JSON.stringify(obj)});
