@@ -18,13 +18,13 @@ obj.data = {
   "cycle_unit": "MONTH",
   "space_cap": 0,
   "renewal_time": 0,
-  "is_free_trial": false,
+  "is_free_trial": true,
   "is_pippit_free_trial": null,
   "can_free_trial": false,
   "can_free_trial_days": 0,
   "is_iap_uncancelled_expired_subscribe": false,
   "workspace_subscribe_info": {
-    "flag": false,
+    "flag": true,
     "vip_real_end": 1
   },
   "aggressive_sensitive_user": false,
