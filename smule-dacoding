@@ -6,7 +6,7 @@ obj = {
     "version": 1
   },
   "data": {
-    "isActive": true,
+    "isActive": false,
     "expireAt": 4094530772,
     "isPromo": false,
     "status": "ACTIVE",
