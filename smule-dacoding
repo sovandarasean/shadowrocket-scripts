@@ -7,7 +7,7 @@ obj = {
   },
   "data": {
     "isActive": true,
-    "expireAt": 4094530772,
+    "expireAt": 1759941223,
     "isPromo": false,
     "status": "TRIAL",
     "skipTrial": true,
