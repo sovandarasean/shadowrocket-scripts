@@ -9,7 +9,7 @@ obj = {
     "isActive": true,
     "expireAt": 4094530772,
     "isPromo": false,
-    "status": "ACTIVE",
+    "status": "TRIAL",
     "skipTrial": true,
     "sku": "com.smule.sing.sub.month.2022.03.trial",
     "storeCancellable": true
