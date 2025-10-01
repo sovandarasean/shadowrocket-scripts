@@ -1,0 +1,18 @@
+var obj = JSON.parse($response.body);
+obj = {
+  "status": {
+    "code": 0,
+    "message": "ok",
+    "version": 1
+  },
+  "data": {
+    "isActive": true,
+    "expireAt": 4094530772,
+    "isPromo": false,
+    "status": "ACTIVE",
+    "skipTrial": true,
+    "sku": "com.smule.sing.sub.month.2022.03",
+    "storeCancellable": true
+  }
+};
+$done({body: JSON.stringify(obj)});
