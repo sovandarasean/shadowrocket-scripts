@@ -11,7 +11,7 @@ obj = {
     "isPromo": false,
     "status": "ACTIVE",
     "skipTrial": true,
-    "sku": "com.smule.sing.sub.year.2022.03",
+    "sku": "com.smule.sing.sub.month.2022.03",
     "storeCancellable": true
   }
 };
