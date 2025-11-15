@@ -1,0 +1,18 @@
+var obj = JSON.parse($response.body);
+
+obj={
+  "Code": 200,
+  "Message": "Ok",
+  "Data": {
+    "Build": "60002",
+    "DayBeforeExpiration": 365,
+    "LicenseKey": "PXM-3FF6B0FB-9F9E-4AF2-AFB2-3152E6D10A93",
+    "NeedToUpdate": false,
+    "NumOfUpdates": 0,
+    "NumberOfNewBuilds": 0,
+    "PushLocalNoti": false,
+    "Tittle": "New update is available"
+  }
+};
+
+$done({body: JSON.stringify(obj)});
