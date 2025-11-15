@@ -1,0 +1,24 @@
+var obj = JSON.parse($response.body);
+
+obj={
+  "Code": 200,
+  "Message": "ok",
+  "Data": {
+    "ID": 57860,
+    "Sign": "$2a$10$ZWxtHMp.G.m0oGwLlp/LNeHIEIdI6FHyeq6xwKzniJnUvO.IDJsWq",
+    "RegisteredAt": "2025-11-15T05:12:17.705837Z",
+    "ActivatedAt": "2025-11-15T05:12:17.705837Z",
+    "LastAccessAt": "2025-11-15T06:37:36.267969487Z",
+    "DeviceID": "oeJX+Y6T9jDZbzT8G4eMqlk/Zp8=",
+    "Name": "Unknown Pro Device",
+    "Status": "active",
+    "LicenseKeyID": 21622,
+    "Platform": "1",
+    "Build": "60002",
+    "BundleID": "com.proxyman.NSProxy",
+    "Comment": ""
+  },
+  "Next": "15 Nov 2090"
+};
+
+$done({body: JSON.stringify(obj)});
