@@ -15,5 +15,7 @@ obj.entitlement.storage={
     };
 
 obj.avatar.placeholder=true;
-body = JSON.stringify(obj); 
+let json = JSON.stringify(obj); 
+
+body = "while (1) {}\n" + json;
 $done({body});
