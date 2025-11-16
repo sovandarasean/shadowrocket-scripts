@@ -1,0 +1,56 @@
+let body = $response.body;
+let obj = JSON.parse(body);
+
+// Get the base64 payload
+let payloadBase64 = obj.asnp.payload;
+
+// Decode the payload
+let decodedPayloadStr = Buffer.from(payloadBase64, 'base64').toString('utf-8');
+let payloadObj = JSON.parse(decodedPayloadStr);
+
+// Keep owner_id
+let owner_id = payloadObj.userProfile.userId;
+
+// Update profileStatus
+payloadObj.userProfile.profileStatus = "PROFILE_AVAILABLE";
+payloadObj.userProfile.profileStatusReason = 1000;
+payloadObj.userProfile.profileStatusReasonText = "Profile Available due to an acquired plan provisioned and ACTIVE";
+
+// Add new accessibleItems object at index 0
+let newItem = {
+    "status": "ACTIVE",
+    "source": {
+        "owner_id": owner_id,
+        "id": "28FA2842F1C4DAE93B7A",
+        "type": "LICENSE",
+        "status_reason": "NORMAL",
+        "can_access_until": 3814473936000
+    },
+    "fulfillable_items": {
+        "lightroom_mobile_app": {
+            "enabled": true,
+            "charging_model": {
+                "model": "RECURRING",
+                "overage": "NA",
+                "rollover": 0
+            }
+        }
+    }
+};
+
+// Ensure accessibleItems exists
+if (!payloadObj.accessibleItems) {
+    payloadObj.accessibleItems = [];
+}
+
+// Insert new item at index 0
+payloadObj.accessibleItems.unshift(newItem);
+
+// Keep legacyProfile as escaped JSON string
+payloadObj.userProfile.legacyProfile = "{\\\"licenseId\\\":\\\"28FA2842F1C4DAE93B7A\\\",\\\"licenseType\\\":3,\\\"licenseVersion\\\":\\\"1.0\\\",\\\"effectiveEndTimestamp\\\":1766292157000,\\\"graceTime\\\":2419200000,\\\"licensedFeatures\\\":[],\\\"enigmaData\\\":{\\\"productId\\\":999,\\\"serialKey\\\":\\\"963795976173918683161284\\\",\\\"clearSerialKey\\\":\\\"17680648530354989415\\\",\\\"locale\\\":\\\"ALL\\\",\\\"associatedLocales\\\":\\\"ALL\\\",\\\"platform\\\":5,\\\"isk\\\":9999999,\\\"customerId\\\":0,\\\"deliveryMethod\\\":3,\\\"pc\\\":true,\\\"rb\\\":false}}";
+
+// Re-encode the payload
+obj.asnp.payload = Buffer.from(JSON.stringify(payloadObj)).toString('base64');
+
+// Return modified body
+$done({ body: JSON.stringify(obj) });
