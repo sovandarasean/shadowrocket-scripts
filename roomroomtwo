@@ -1,0 +1,68 @@
+let obj = JSON.parse($response.body);
+obj = {
+  "commerce_profile": {
+    "subscriptions": [
+      {
+        "status": "ACTIVE",
+        "offer_details": [
+          {
+            "customer_segment": "INDIVIDUAL",
+            "product_arrangement": {
+              "code": "lightroom_mobile_plan_with_40gb_photo_storage_individual",
+              "name": "Lightroom Mobile with 40GB",
+              "cloud": "CREATIVE",
+              "family": "LIGHTROOM_MOBILE"
+            },
+            "buying_program": "RETAIL",
+            "commitment": "YEAR",
+            "sales_channel": "INDIRECT",
+            "market_segments": [
+              "COM"
+            ],
+            "term": "ANNUAL",
+            "offer_id": "5C4666204DD355273FD6E2581891B233"
+          }
+        ],
+        "id": "28FA2842F1C4DAE93B7A",
+        "source": {
+          "type": "LICENSE",
+          "id": "28FA2842F1C4DAE93B7A"
+        },
+        "owner_id": "C9C5226868D1537A0A495C3B@AdobeID",
+        "end_timestamp": 3814468169000,
+        "grace_period": 2419200000
+      },
+      {
+        "status": "ACTIVE",
+        "offer_details": [
+          {
+            "customer_segment": "INDIVIDUAL",
+            "product_arrangement": {
+              "code": "PA-4869",
+              "name": "CCI_INDIVIDUAL_FREE"
+            },
+            "buying_program": "RETAIL",
+            "commitment": "YEAR",
+            "sales_channel": "DIRECT",
+            "market_segments": [
+              "COM"
+            ],
+            "term": "NONE",
+            "offer_id": "ZZZZZDC5C21133C3F4558CAA708D8366"
+          }
+        ],
+        "id": "ZZZ18B1046F26D1332FB",
+        "source": {
+          "type": "FREE_ENTITLEMENT",
+          "id": "ZZZ18B1046F26D1332FB"
+        },
+        "owner_id": "C9C5226868D1537A0A495C3B@AdobeID",
+        "end_timestamp": 1763356748951,
+        "grace_period": 0
+      }
+    ]
+  }
+};
+let body = JSON.stringify(obj); 
+
+$done({body});
